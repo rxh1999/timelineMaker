@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>Timeline Chart Example</title>
+    <title>Timeline Maker</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <h1>Timeline Maker</h1>
-      <div id="chart-input">
-        <label id="data-input-label" for="data-input">Lable:</label>
-        <input id="data-input" type="text">
-        <button id="add-data-button">Record</button>
-        <button id="clear-btn">Clear</button>
-        <button id="download-btn">Download</button>
-      </div>
-      <div id="chart-container"></div>
+        <h1>Timeline Maker</h1>
+        <div id="chart-input">
+            <label id="data-input-label" for="data-input">Lable:</label>
+            <input id="data-input" type="text">
+            <button id="add-data-button">Record</button>
+            <button id="clear-btn">Clear</button>
+            <button id="download-btn">Download</button>
+        </div>
+        <div id="chart-container"></div>
+        <div id="footer">
+            <p>
+                This page has been visited <code id="visits">...</code> times.
+            </p>
+        </div>
+
     </div>
     <script src="https://unpkg.com/d3@7.8.0/dist/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3kit/3.2.0/d3kit.min.js"></script>
     <script src="https://unpkg.com/d3-scale@3.0.0/dist/d3-scale.min.js"></script>
     <script src="https://unpkg.com/d3-array@3.2.1/dist/d3-array.min.js"></script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/labella/1.1.4/labella.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3kit-timeline/2.0.1/d3kit-timeline.min.js"></script>
     <script src="script.js"></script>
-  </body>
+
+    <!-- JSONP to solve CORS problem -->
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/rxh1999.github.io/timelineMaker?callback=cb"></script>
+</body>
+
 </html>

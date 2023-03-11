@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+* {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -41,4 +47,14 @@ h1 {
     height: max-content;
     margin: 0 auto;
     background-color: #f7f7f7;
+}
+
+#footer {
+    text-align: center;
+}
+
+code {
+    padding: 2px 4px;
+    background-color: #efefef;
+    border-radius: 4px;
 }
