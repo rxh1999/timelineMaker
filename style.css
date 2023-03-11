@@ -1,0 +1,44 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#chart-input {
+    margin: 10px 10px 30px 10px;
+    text-align-last: center;
+}
+
+#data-input-label {
+    font-size: x-large;
+}
+
+#data-input {
+    width: 200px;
+    font-size: x-large;
+    text-align-last: left;
+}
+
+#clear-btn {
+    font-size: x-large;
+}
+
+#add-data-button {
+    font-size: x-large;
+}
+
+#download-btn {
+    font-size: x-large;
+}
+
+
+#chart-container {
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+}
